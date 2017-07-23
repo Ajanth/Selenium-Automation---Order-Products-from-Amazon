@@ -57,3 +57,22 @@ Final Success Message:
 ORDER_URL::https://www.amazon.de/gp/css/summary/edit.html/ref=typ_rev_edit?ie=UTF8&orderID=302-0010732-9069141
 ORDER_NUMBER::302-0010732-9069141
 ORDERED ITEM SUCCESSFULLY
+
+
+
+How to Run :  
+Add chrome binary location and chrome driver location in config.properties
+like this
+CHROME_BINARY_LOCATION=C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe
+CHROME_DRIVER_LOCATION=C:\\Selenium\\chromedriver.exe
+
+CHROME_DRIVER_LOCATION is specific to the chrome version you're using.
+chromedriver.exe in my RDP will work only for chrome 43.0. For latest chrome version, you can download the chromedriver.exe from this link
+https://sites.google.com/a/chromium.org/chromedriver/downloads
+
+Provide order details in config.properties and with below command
+
+java -jar AmazonOrder.jar amazon_email_id amazon_pwd "config.properties" "cookies.txt" "order.properties"
+
+
+
